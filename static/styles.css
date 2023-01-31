@@ -1,0 +1,14 @@
+.background_image {
+background-image: url(https://img.freepik.com/free-vector/colourful-dynamic-flow-background_52683-42964.jpg?w=740&t=st=1675171149~exp=1675171749~hmac=48a1aea1d912f201e963dbf1837132c4ce35d965e418dd7e6e3f83361fa61f75);
+background-repeat: no-repeat;
+background-position-x: center;
+background-size: cover;
+background-position-y: center;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}

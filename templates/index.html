@@ -1,0 +1,43 @@
+{% include "header.html" %}
+
+{% if current_user.is_authenticated %}
+<div class="bg-info container col-xxl-8 px-4 py-7">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://img.freepik.com/free-vector/hand-painted-watercolor-galaxy-background_52683-63441.jpg?w=740&t=st=1675165803~exp=1675166403~hmac=fa0875f2275fb2878f4342d77161010bf6c15483f34ead10dfbc6469a5b48b60"
+                 class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" loading="lazy" width="700" height="500">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Welcome {{ current_user.name }}</h1>
+            <p class="lead py-2">Now you can see the secret ... click below</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-success btn-lg px-4 me-md-2"><a
+                        class="text-decoration-none link-light" href="{{ url_for('result') }}">Download Secret</a>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% else %}
+<div class="bg-light container col-xxl-8 px-4 py-7">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+        <div class="col-10 col-sm-8 col-lg-6">
+            <img src="https://www.pexels.com/photo/view-of-street-from-a-glass-window-531880/"
+                 class="d-block mx-lg-auto img-fluid" alt="beautiful-place" loading="lazy" width="700" height="500">
+        </div>
+        <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">My Lovely Website</h1>
+            <p class="lead py-2">This site is a basic site with authentication process and has a nice header and footer
+                at each page so it is a start now login to see the results.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                <button type="button" class="btn btn-primary btn-lg px-4 me-md-2"><a
+                        class="text-decoration-none link-light" href="{{ url_for('login') }}">Login</a></button>
+                <button type="button" class="btn btn-outline-secondary btn-lg px-4"><a
+                        class="text-decoration-none link-dark" href="{{ url_for('register') }}">Sign Up</a></button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endif %}
+
+{% include "footer.html" %}
